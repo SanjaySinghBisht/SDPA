@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/fonts.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="js/jquery.js"></script>
+<script src="js/common.js"></script>
+ <link rel="stylesheet" href="css/jquery-ui.css" />
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+$(function() {
+	$( "#accordion" ).accordion();
+	$( ".datepicker" ).datepicker();
+	$("#tabs-control form").each(function() {
+		$(this).children(".item:even").addClass("even");
+	});
+});
+</script>
+
+<script type="text/javascript">
+	function DropDown(el) {
+		this.dd = el;
+		this.placeholder = this.dd.children('span');
+		this.opts = this.dd.find('ul.dropdown > li');
+		this.val = '';
+		this.index = -1;
+		this.initEvents();
+	}
+	DropDown.prototype = {
+		initEvents : function() {
+			var obj = this;
+				obj.dd.on('click', function(event){
+				$(this).toggleClass('active');
+				return false;
+			});
+			obj.opts.on('click',function(){
+				var opt = $(this);
+				obj.val = opt.text();
+				obj.index = opt.index();
+				obj.placeholder.text(obj.val);
+			});
+		},
+		getValue : function() {
+			return this.val;
+		},
+		getIndex : function() {
+			return this.index;
+		}
+	}
+
+	$(function() {
+		var dd = new DropDown( $('#dd1') );
+		$(document).click(function() {
+		// all dropdowns
+			$('.wrapper-dropdown-5').removeClass('active');
+		});
+			
+	});
+</script>
+</head>
+
+<body>
+<div id="main-container">
+	<section id="header-section">
+    	<div class="center-frame relative">
+       	  <div class="logo"><img src="images/evry_logo.png"  /></div>
+            <div class="top-links">Username &nbsp;&nbsp;<b>Sign out</b></div>
+            <div class="clear"></div>
+        </div>	
+    </section>
+    <section id="page-content">
+    	<div class="center-frame">
+            <h1 class="heading-main">Future Proof Service design</h1>
+        	
+            <div id="tabs-control">
+            	<div class="tabs">
+                    <ul>
+                        <li><a href="#">Service Information</a></li>
+                        <li><a href="#" class="selected">Requirements Information</a></li>
+                        <li><a href="#">Capabilities Information</a></li>
+                        <li><a href="#">Design Information</a></li>
+                        <li class="last"><a href="#">Guides</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            	<div class="tabs-content">
+                	
+                        <h3 class="heading_tab_content">Requirements Information</h3>
+                        <div class="box_tab_content">
+                        <form action="#" method="post">
+                        	<div class="item">
+                            <label>Requirement Type</label>
+                            <div class="wrapper-select">
+                        	<div tabindex="1" class="wrapper-dropdown-5" id="dd1">
+                                    <span id="dd1-span">Requirement Type</span>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Type 1</a></li>
+                                        <li><a href="#">Type 2</a></li>
+                                        <li><a href="#">Type 3</a></li>
+                                    </ul>
+                            </div>
+                            </div>
+                            </div>
+                        	
+                            <div class="item">
+                            <label>Requirement Area</label>
+                            <div class="wrapper-select">
+                        	<div tabindex="1" class="wrapper-dropdown-5" id="dd2">
+                                    <span id="dd2-span">Requirement Area</span>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Type 1</a></li>
+                                        <li><a href="#">Type 2</a></li>
+                                        <li><a href="#">Type 3</a></li>
+                                    </ul>
+                            </div>
+                            </div>
+                            </div>
+                            
+                            <div class="item">
+                            <label>Requirement Origin</label>
+                            <input type="text" name="requirement_origin" class="txt-box-common">
+                            </div>
+                            
+                            <div class="item">
+                            <label>Capability Heading</label>
+                            <input type="text" name="requirement_heading" class="txt-box-common" >
+                            </div>
+                            <div class="clear"></div>
+                            <div class="item">
+                            <label>Requirement Description</label>
+                            <textarea rows="3" cols="90" class="txt-box-common"></textarea>
+                            </div>
+                            
+                            <div class="item">
+                            <label>Requirement comments</label>
+                            <textarea rows="3" cols="90" class="txt-box-common"></textarea>
+                            </div>
+                        
+                        
+                            <div class="clear"></div>
+                            
+                        </form>
+                        </div>
+                        <div class="clear"></div>
+                        
+                        
+                        
+                        
+                        
+                   <div class="buttons">
+                        <a href="#" class="btn add_new">Create New Account</a>
+                        
+                        <div class="pos_right">
+                            <a href="#" class="btn">Save</a>
+                            <a href="#" class="btn">Cancel</a>
+                        </div>
+                      </div>
+                            
+                </div>
+            </div>
+            
+          
+            
+        	
+        </div>    
+    </section>
+    <section id="footer">
+    <div class="left-bar"></div>
+    <div class="right-bar"></div>
+    <div class="center-frame">
+    	<label class="copyright">©Copyright EVRY 2013</label>
+        <a class="evry_footer_link">Visit EVRY.com</a>
+    </div>
+    </section>
+</div>
+</body>
+</html>

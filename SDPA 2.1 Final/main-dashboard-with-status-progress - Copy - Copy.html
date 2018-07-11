@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Main Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="css/fonts.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.dropdown.css" />
+<script src="js/jquery.js"></script>
+<!-- <script>
+$(document).ready(function(){
+var width=$(document).width();
+alert(width);
+if(width < 620 && width > 320) {
+    $("head").append("<link id='yournewcss' href='css/red.css' type='text/css' rel='stylesheet' />");
+}
+});
+</script>  -->
+<script src="js/common.js"></script>
+<script src="js/jquery.dropdown.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".tooltip_box").mouseenter(function() {
+			var dg = $(this).attr('name');
+			//alert(test);
+			$(this).parents("div.grid-content").css("position", "relative");
+			$(this).parents("div.grid-content").append('<div class="balloon"><label class="green_arrow"></label><div class="progress-bar"><a href="#" class="one">Service Strategy</a> <a href="#" class="two">Analysis & design</a> <a href="#" class="three">develop ment</a> <a href="#" class="four">delivery Chain</a> <a href="#" class="five">Service Production</a> </div> <div class="clear"></div><div class="arrow"></div></div>');
+			$(this).parents("div.grid-content").children("div.balloon").addClass(dg);
+			$(this).parents("div.grid-content").children("green_arrow").append("hello");
+		});
+		$(".tooltip_box").mouseleave(function() {
+			$(this).parents("div.grid-content").removeAttr("style");
+			$(this).parents("div.grid-content").children('.balloon').remove();
+		});
+		
+		settabs();
+	});
+</script>
+
+</head>
+
+<body>
+<div id="main-container">
+  <section id="header-section">
+    <div class="center-frame relative">
+      <div class="logo"><img src="images/evry_logo.png"  /></div>
+      <div class="top-links">Username &nbsp;&nbsp;<b>Sign out</b></div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <input type="text" name="someInput" placeholder="Douglas Quaid">
+  <input type="text" name="someInput" placeholder="Douglas Quaid ">
+  <input type="text" name="someInput" placeholder="Douglas Quaid" required autofocus>
+  <section id="page-content">
+    <div class="center-frame">
+      <h1 class="heading-main">Future Proof Service design</h1>
+      <div class="buttons"> <a href="#" class="btn add_new light_green">Create New Account</a>
+        <div class="right"> <a href="#" class="btn hide_condition">View</a> <a href="#" class="btn hide_condition">Edit</a> <a href="#" class="btn arrow hide_condition" data-dropdown="#dropdown-1">Download</a> <a href="#" class="btn light_red last_right">Delete</a> </div>
+      </div>
+	  <div class="grid-control">
+        <div class="grid-data">
+          <div class="div_table">
+            <div class="heading">
+              <div class="main-title cell">Service Name</div>
+              <div class="cell">Last Modified</div>
+              <div class="cell">Owner</div>
+            
+            </div>
+			</div>
+			</div>
+			
+			<div style="height:100px;overflow:auto" class="grid-data">
+          <div class="div_table test1">
+			<div class="heading test">
+              <div class="cell">Service Name</div>
+              <div class="cell">Last Modified</div>
+              <div class="cell">Owner</div>
+              
+            </div>
+			<div class="heading test">
+              <div class="cell">Service Name</div>
+              <div class="cell">Last Modified</div>
+              <div class="cell">Owner</div>
+              
+            </div>
+			<div class="heading test">
+              <div class="cell">Service Name</div>
+              <div class="cell">Last Modified</div>
+              <div class="cell">Owner</div>
+              
+            </div>
+			<div class="heading test">
+              <div class="cell">Service Name</div>
+              <div class="cell">Last Modified</div>
+              <div class="cell">Owner</div>
+              
+            </div>
+			<div class="heading test">
+              <div class="cell">Service Name</div>
+              <div class="cell">Last Modified</div>
+              <div class="cell">Owner</div>
+              
+            </div>
+			
+			</div>
+			</div>
+			</div>
+     
+	 </div>
+  </section>
+  <section id="footer">
+    <div class="left-bar"></div>
+    <div class="right-bar"></div>
+    <div class="center-frame">
+      <label class="copyright">©Copyright EVRY 2013</label>
+      <a class="evry_footer_link">Visit EVRY.com</a> </div>
+  </section>
+ 
+</div>
+<div id="dropdown-1" class="dropdown dropdown-tip">
+  <ul class="dropdown-menu">
+    <li class="disable_download"><a href="#1">Item 1</a></li>
+    <li><a href="#2">Item 2</a></li>
+    <li><a href="#3">Item 3</a></li>
+    <li><a href="#4" class="last">Item 4</a></li>
+  </ul>
+</div>
+</body>
+</html>

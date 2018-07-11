@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/fonts.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="js/jquery.js"></script>
+<script src="js/common.js"></script>
+ <link rel="stylesheet" href="css/jquery-ui.css" />
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+$(function() {
+	$( "#accordion" ).accordion();
+	$( ".datepicker" ).datepicker();
+	$("#tabs-control form").each(function() {
+		$(this).children(".txt-box-common:even").addClass("even");
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="main-container">
+	<section id="header-section">
+    	<div class="center-frame relative">
+       	  <div class="logo"><img src="images/evry_logo.png"  /></div>
+            <div class="top-links">Username &nbsp;&nbsp;<b>Sign out</b></div>
+            <div class="clear"></div>
+        </div>	
+    </section>
+    <section id="page-content">
+    	<div class="center-frame">
+            <h1 class="heading-main">Future Proof Service design</h1>
+        	
+            <div id="tabs-control">
+            	<div class="tabs">
+                    <ul>
+                        <li><a href="#">Service Information</a></li>
+                        <li><a href="#">Requirements Information</a></li>
+                        <li><a href="#">Capabilities Information</a></li>
+                        <li><a href="#">Design Information</a></li>
+                        <li class="last"><a href="#" class="selected">Guides</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            	<div class="tabs-content">
+                	
+                        <h3 class="heading_tab_content">Guides</h3>
+                        <div class="box_tab_content">
+                        <form action="#" method="post">
+                        	<div class="file_browse item">
+                            	<label>Conceptual Diagram</label>
+                                <input type="text" class="file_name" />
+                                <input type="file" />
+                            </div>
+                            
+                            <div class="file_browse item">
+                            	<label>Conceptual Diagram</label>
+                                <input type="text" class="file_name" />
+                                <input type="file" />
+                                
+                            </div>
+                            <div class="file_browse item">
+                            	<label>Conceptual Diagram</label>
+                                <input type="text" class="file_name" />
+                                <input type="file" />
+                            </div>
+                            
+                            <div class="file_browse item">
+                            	<label>Conceptual Diagram</label>
+                                <input type="text" class="file_name" />
+                                <input type="file" />
+                            </div>
+                            <div class="file_browse item">
+                            	<label>Conceptual Diagram</label>
+                               <input type="text" class="file_name" />
+                               <input type="file" />
+                            </div>
+                       
+                         <div class="clear"></div>
+                         </form> 
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                 <div class="buttons">
+                 	
+                    <div class="pos_right">
+                        <a href="#" class="btn">Save</a>
+                        <a href="#" class="btn">Cancel</a>
+                    </div>
+                    <div class="clear"></div>
+                 </div> 
+                        
+                        
+                </div>
+            </div>
+            
+          
+            
+        	
+        </div>    
+    </section>
+    <section id="footer">
+    <div class="left-bar"></div>
+    <div class="right-bar"></div>
+    <div class="center-frame">
+    	<label class="copyright">©Copyright EVRY 2013</label>
+        <a class="evry_footer_link">Visit EVRY.com</a>
+    </div>
+    </section>
+</div>
+</body>
+</html>

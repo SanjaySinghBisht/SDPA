@@ -1,0 +1,6 @@
+* {margin:0px; padding:0px;}
+body {
+    font-family: Arial,helvetica,sans-sarif;
+    font-size: 12px;
+	background:red}
+#heading-main{display:none;}
